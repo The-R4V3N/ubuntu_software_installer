@@ -1,5 +1,5 @@
 #!/bin/bash
-# run it as sudo yes | sh ubuntu_software_installer_test.sh
+# run it as sudo yes | sh ubuntu_software_installer_dry_run.sh
 
 # Exit immediately if a command exits with a non-zero status.
 set -e
