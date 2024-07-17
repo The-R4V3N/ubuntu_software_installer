@@ -37,6 +37,14 @@ echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" 
 sudo apt update
 sudo apt install -y code
 
+# Install Warp Terminal
+wget -qO- https://releases.warp.dev/linux/keys/warp.asc | gpg --dearmor > warpdotdev.gpg
+sudo install -D -o root -g root -m 644 warpdotdev.gpg /etc/apt/keyrings/warpdotdev.gpg
+sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/warpdotdev.gpg] https://releases.warp.dev/linux/deb stable main" > /etc/apt/sources.list.d/warpdotdev.list'
+rm warpdotdev.gpg
+sudo apt update && sudo apt install warp-terminal
+echo "Warp-Terminal installed."
+
 # nRF Connect
 ## Download the nRF Connect AppImage
 NRF_URL="https://developer.nordicsemi.com/.pc-tools/nrfconnect-appimage/linux/latest/nrfconnect-3.9.2-x86_64.AppImage"
