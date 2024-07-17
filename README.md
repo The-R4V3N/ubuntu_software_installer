@@ -62,19 +62,23 @@ This script automates the installation of several essential software packages on
     - Downloads and adds Microsoft's GPG key.
     - Adds the VS Code repository to your system.
     - Installs VS Code.
-6. **Installs nRF Connect**:
+6. **Installs Warp Terminal**
+   - Downloads and adds Warp's GPG key.
+   - Adds the Warp reposoitory to your system.
+   - Installs Warp.
+7. **Installs nRF Connect**:
     - Downloads the latest nRF Connect AppImage.
     - Makes the AppImage executable.
     - Moves the AppImage to `/usr/local/bin` for global access.
-7. **Installs SEGGER J-Link Software**:
+8. **Installs SEGGER J-Link Software**:
     - Downloads the J-Link Software.
     - Installs the downloaded `.deb` file.
     - Fixes any dependency issues.
-8. **Installs NVM (Node Version Manager)** and **Node.js**:
+9. **Installs NVM (Node Version Manager)** and **Node.js**:
     - Downloads and runs the NVM installation script.
     - Sources the NVM script to make `nvm` command available.
     - Installs the latest stable version of Node.js using NVM.
-9. **Installs Git** and **configures Git** with your provided user email and username.
+10. **Installs Git** and **configures Git** with your provided user email and username.
 
 ### Variables
 
