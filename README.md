@@ -24,7 +24,7 @@
 
 # Ubuntu Software Installer Script
 
-This script automates the installation of several essential software packages on an Ubuntu system. It installs `wget`, `curl`, Brave browser, VS Code, nRF Connect, SEGGER J-Link Software, NVM, Node.js, and Git. Additionally, it sets up Git with the provided user email and username.
+This script automates the installation of several essential software packages on an Ubuntu system. It installs `wget`, `curl`, Brave browser, VS Code, Warp-Terminal, nRF Connect, SEGGER J-Link Software, NVM, Node.js, and Git. Additionally, it sets up Git with the provided user email and username.
 
 ## Prerequisites
 
