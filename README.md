@@ -1,8 +1,8 @@
-# <div align="center">Hey 👋, I'm The-R4V3N!</div>  
+# <div align="center">Hey 👋, I'm The-R4V3N!</div>
 
 ----
 
-## <div align="center"> Connect with me  
+## <div align="center"> Connect with me
 
 <div align="center">
  <a href="https://github.com/The-R4V3N" target="_blank">
@@ -16,15 +16,13 @@
 <a href="https://www.facebook.com/oliver.joisten" target="_blank">
 <img src=https://img.shields.io/badge/facebook-%232E87FB.svg?&style=for-the-badge&logo=facebook&logoColor=white alt=facebook style="margin-bottom: 5px;" />
 </a>
-
-</a>  
 </div>
 
-## Welcome! Glad to see you here  
+## Welcome! Glad to see you here
 
 # Ubuntu Software Installer Script
 
-This script automates the installation of several essential software packages on an Ubuntu system. It installs `wget`, `curl`, Brave browser, VS Code, Warp-Terminal, nRF Connect, SEGGER J-Link Software, NVM, Node.js, and Git. Additionally, it sets up Git with the provided user email and username.
+This script automates the installation of several essential software packages on an Ubuntu system. It installs `wget`, `curl`, Brave browser, VS Code, Warp-Terminal, nRF Connect, SEGGER J-Link Software, NVM, Node.js, Git, and `build-essential`. Additionally, it sets up Git with the provided user email and username.
 
 ## Prerequisites
 
@@ -54,31 +52,32 @@ This script automates the installation of several essential software packages on
 1. **Updates the package list** to ensure you have the latest information on the newest versions of packages and their dependencies.
 2. **Installs `wget`** if it is not already installed.
 3. **Installs `curl`** for data transfer.
-4. **Installs Brave browser**:
+4. **Installs `build-essential`** for compiling software.
+5. **Installs Brave browser**:
     - Downloads and adds the Brave browser's GPG key.
     - Adds the Brave browser repository to your system.
     - Installs the Brave browser.
-5. **Installs Visual Studio Code (VS Code)**:
+6. **Installs Visual Studio Code (VS Code)**:
     - Downloads and adds Microsoft's GPG key.
     - Adds the VS Code repository to your system.
     - Installs VS Code.
-6. **Installs Warp Terminal**
-   - Downloads and adds Warp's GPG key.
-   - Adds the Warp reposoitory to your system.
-   - Installs Warp.
-7. **Installs nRF Connect**:
+7. **Installs Warp Terminal**:
+    - Downloads and adds Warp's GPG key.
+    - Adds the Warp repository to your system.
+    - Installs Warp.
+8. **Installs nRF Connect**:
     - Downloads the latest nRF Connect AppImage.
     - Makes the AppImage executable.
     - Moves the AppImage to `/usr/local/bin` for global access.
-8. **Installs SEGGER J-Link Software**:
+9. **Installs SEGGER J-Link Software**:
     - Downloads the J-Link Software.
     - Installs the downloaded `.deb` file.
     - Fixes any dependency issues.
-9. **Installs NVM (Node Version Manager)** and **Node.js**:
+10. **Installs NVM (Node Version Manager)** and **Node.js**:
     - Downloads and runs the NVM installation script.
     - Sources the NVM script to make `nvm` command available.
     - Installs the latest stable version of Node.js using NVM.
-10. **Installs Git** and **configures Git** with your provided user email and username.
+11. **Installs Git** and **configures Git** with your provided user email and username.
 
 ### Variables
 
@@ -93,12 +92,14 @@ This script automates the installation of several essential software packages on
 1. Updates package list.
 2. Installs `wget` if not already present.
 3. Installs `curl`.
-4. Installs Brave browser.
-5. Installs VS Code.
-6. Installs nRF Connect.
-7. Installs SEGGER J-Link Software.
-8. Installs NVM and Node.js.
-9. Installs Git and configures Git.
+4. Installs `build-essential`.
+5. Installs Brave browser.
+6. Installs VS Code.
+7. Installs Warp Terminal.
+8. Installs nRF Connect.
+9. Installs SEGGER J-Link Software.
+10. Installs NVM and Node.js.
+11. Installs Git and configures Git.
 
 ## Example Output
 
@@ -108,6 +109,7 @@ When running the script, you will see output similar to the following:
 sudo apt update
 sudo apt install -y wget
 sudo apt-get install -y curl
+sudo apt-get install -y build-essential
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 sudo apt update
